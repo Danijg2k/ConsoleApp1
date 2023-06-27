@@ -69,28 +69,30 @@
 
 
 // 8. Excepciones
-Console.WriteLine("Introduce un número: ");
-int num;
+//Console.WriteLine("Introduce un número: ");
+//int num;
 
-try
-{
-    num = int.Parse(Console.ReadLine());
-}
-catch (FormatException ex)
-{
-    Console.WriteLine($"No has introducido un número \nMensaje de error: {ex.Message}");
-}
-catch (OverflowException ex)
-{
-    Console.WriteLine("El número introducido es demasiado largo para un int");
-}
-catch (ArgumentNullException ex)
-{
-    Console.WriteLine("No se puede parsear un valor null");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Ha ocurrido una excepción no conocida: {ex.Message}");
-}
+//try
+//{
+//    num = int.Parse(Console.ReadLine());
+//}
+//catch (OverflowException e)
+//{
+//    Console.WriteLine("El número introducido es demasiado largo para un int");
+//}
+//catch (ArgumentNullException e)
+//{
+//    Console.WriteLine("No se puede parsear un valor null");
+//}
+//catch (Exception e) when (e.GetType() != typeof(FormatException)) // Excepción con filtro
+//{
+//    Console.WriteLine($"Ha ocurrido una excepción no conocida: {e.Message}");
+//}
+//catch (FormatException e)
+//{
+//    Console.WriteLine($"No has introducido un número \nMensaje de error: {e.Message}");
+//}
 
 
+// 9. Uso checked
+Console.WriteLine(int.MaxValue);
