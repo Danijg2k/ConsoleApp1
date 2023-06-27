@@ -63,6 +63,34 @@
 
 
 // 7. Clase Random
-Random numero = new Random();
-int numAleatorio = numero.Next(0, 100);
-Console.WriteLine(numAleatorio);
+//Random numero = new Random();
+//int numAleatorio = numero.Next(0, 100);
+//Console.WriteLine(numAleatorio);
+
+
+// 8. Excepciones
+Console.WriteLine("Introduce un número: ");
+int num;
+
+try
+{
+    num = int.Parse(Console.ReadLine());
+}
+catch (FormatException ex)
+{
+    Console.WriteLine($"No has introducido un número \nMensaje de error: {ex.Message}");
+}
+catch (OverflowException ex)
+{
+    Console.WriteLine("El número introducido es demasiado largo para un int");
+}
+catch (ArgumentNullException ex)
+{
+    Console.WriteLine("No se puede parsear un valor null");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Ha ocurrido una excepción no conocida: {ex.Message}");
+}
+
+
