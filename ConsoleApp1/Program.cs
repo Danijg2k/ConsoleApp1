@@ -95,4 +95,17 @@
 
 
 // 9. Uso checked
-Console.WriteLine(int.MaxValue);
+int maxEntero = int.MaxValue;
+Console.WriteLine(maxEntero);
+Console.WriteLine(maxEntero + 20);
+/* Lo anterior no da error aunque se salga de rango (para que analice el overflow de forma estricta hay que (una de dos):
+ * 1. Meter el bloque de código en checked
+ * 2. Click derecho en proyecto -> properties -> build -> advanced -> check for arithmetic overflow
+ * A continuación repetimos lo anterior pero comprobando estrictamente
+ */
+checked
+{
+    Console.WriteLine("-----------");
+    Console.WriteLine(maxEntero);
+    Console.WriteLine(maxEntero + 20); // En este caso sí que lanzará OverflowException (se checkea estrictamente)
+}
