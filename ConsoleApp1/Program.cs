@@ -7,10 +7,12 @@
 //Console.WriteLine($"Número 1: {a}. Número 2: {b}.");
 
 
+
 // 2. Pedir valores por pantalla
 //Console.WriteLine("Introduce un número: ");
 //int num = int.Parse(Console.ReadLine());
 //Console.WriteLine($"Número + 3: {num + 3}");
+
 
 
 // 3. Constantes
@@ -18,6 +20,7 @@
 //Console.WriteLine(VALOR);
 //const double PI = Math.PI;
 //Console.WriteLine(PI);
+
 
 
 // 4. Métodos
@@ -37,10 +40,12 @@
 //Console.WriteLine(dividir(12, 2));
 
 
+
 // 5. Varios
 //Console.WriteLine("Introduce núm y le sumaré 10 uds: ");
 //int edad = Int32.Parse(Console.ReadLine());
 //Console.WriteLine(edad + 10);
+
 
 
 // 6. Comparación cadenas
@@ -62,10 +67,12 @@
 //}
 
 
+
 // 7. Clase Random
 //Random numero = new Random();
 //int numAleatorio = numero.Next(0, 100);
 //Console.WriteLine(numAleatorio);
+
 
 
 // 8. Excepciones
@@ -94,18 +101,41 @@
 //}
 
 
-// 9. Uso checked
-int maxEntero = int.MaxValue;
-Console.WriteLine(maxEntero);
-Console.WriteLine(maxEntero + 20);
+
+// 9. Uso checked (int y long)
+//int maxEntero = int.MaxValue;
+//Console.WriteLine(maxEntero);
+//Console.WriteLine(maxEntero + 20);
 /* Lo anterior no da error aunque se salga de rango (para que analice el overflow de forma estricta hay que (una de dos):
  * 1. Meter el bloque de código en checked
- * 2. Click derecho en proyecto -> properties -> build -> advanced -> check for arithmetic overflow
- * A continuación repetimos lo anterior pero comprobando estrictamente
+ * 2. Utilizar checked a nivel de línea
+ * 3. Click derecho en proyecto -> properties -> build -> advanced -> check for arithmetic overflow
  */
-checked
-{
-    Console.WriteLine("-----------");
-    Console.WriteLine(maxEntero);
-    Console.WriteLine(maxEntero + 20); // En este caso sí que lanzará OverflowException (se checkea estrictamente)
-}
+
+// Opción 1 - Lo anterior pero comprobando estrictamente (nivel de bloque)
+//checked
+//{
+//    Console.WriteLine("-----------");
+//    Console.WriteLine(maxEntero);
+//    Console.WriteLine(maxEntero + 20); // OverflowException (se checkea estrictamente)
+//}
+// Opción 2 - También comprobando estrictamente (nivel de línea)
+//Console.WriteLine("-----------");
+//Console.WriteLine(maxEntero);
+//Console.WriteLine(checked (maxEntero + 20)); // OverflowException (se checkea estrictamente)
+// Opción 3 - Seguir instrucciones del paso 3 arriba. No haría falta marcar nada, checkearía el proyecto.
+
+
+
+// 10. Uso unchecked (int y long) -> (debemos tener el proyecto checkeando arithmetic overflow) -> mirar paso 3 anterior
+//int maxEntero = int.MaxValue;
+//Console.WriteLine("-----------");
+//Console.WriteLine(maxEntero);
+//Console.WriteLine(unchecked(maxEntero + 20)); // En este caso no lanza OverflowException (ya que decimos que no compruebe estrictamente)
+
+
+
+// 11. Biblioteca de clases .NET (ver espacio de nombres con todos los métodos) -> https://learn.microsoft.com/es-es/dotnet/api/?view=net-7.0
+
+
+
