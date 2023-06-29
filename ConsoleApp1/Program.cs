@@ -1,4 +1,5 @@
-﻿
+﻿using ConsoleApp1.Clases;
+
 // 1. Sustitución en cadenas
 //Console.WriteLine("Introduce un número: ");
 //int a = int.Parse(Console.ReadLine());
@@ -138,4 +139,17 @@
 // 11. Biblioteca de clases .NET (ver espacio de nombres con todos los métodos) -> https://learn.microsoft.com/es-es/dotnet/api/?view=net-7.0
 
 
+
+// 12. Comentario TODO
+// TODO: Este es un comentario visible desde la 'Lista de Tareas', donde se indicarán archivos líneas en las que tenemos comentarios TODO.
+
+
+
+// 13. POO
+Punto p1 = new Punto(9, 5);
+Punto p2 = new Punto();
+
+Console.WriteLine(p1.X);
+p1.X = 4;
+Console.WriteLine(p1.X);
 
