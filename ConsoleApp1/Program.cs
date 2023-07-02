@@ -195,7 +195,24 @@
 
 
 
-// 14. Herencia
+// 14. Comentario TODO
+// TODO: Este es un comentario visible desde la 'Lista de Tareas', donde se indicarán archivos líneas en las que tenemos comentarios TODO.
+
+
+
+// 15. POO
+//using ConsoleApp1.Clases;
+
+//Punto p1 = new Punto(9, 5);
+//Punto p2 = new Punto();
+
+//Console.WriteLine(p1.X);
+//p1.X = 4;
+//Console.WriteLine(p1.X);
+
+
+
+// 16. Herencia
 using ConsoleApp1;
 
 Caballo babieca = new Caballo("Babieca");
