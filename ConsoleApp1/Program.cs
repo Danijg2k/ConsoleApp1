@@ -1,5 +1,4 @@
-﻿
-// 1. Sustitución en cadenas
+﻿// 1. Sustitución en cadenas
 //Console.WriteLine("Introduce un número: ");
 //int a = int.Parse(Console.ReadLine());
 //Console.WriteLine("Introduce otro número: ");
@@ -139,3 +138,70 @@
 
 
 
+// 12. Arrays
+//using ConsoleApp1.Clases;
+
+//// Explícitos
+//int[] enteros = new int[3];
+//enteros[0] = 1;
+//enteros[1] = 2;
+//enteros[2] = 3;
+
+//double[] doubles = new double[] { 1, 5.6, 8, 9 };
+
+//Empleado[] empleados = new Empleado[3];
+//empleados[0] = new Empleado();
+//empleados[1] = new Empleado("Dani", 22);
+//Empleado emp = new Empleado("Sheraz", 25);
+//empleados[2] = emp;
+
+//// Implícitos
+//var datos = new[] { 1, 2.5, 3 };        // Detecta que double es el mejor dato para el array en esta situación
+//Console.WriteLine(datos.GetType());
+//var nombres = new[] { "Chaima", "Luisma", "Alberto" };
+//Console.WriteLine(nombres.GetType());
+
+
+//// Arrays de tipos o clases anónimas
+//var personas = new[]
+//{
+//    new {nombre = "Juan", edad = 19},
+//    new {nombre = "María", edad = 49},
+//    new {nombre = "Diana", edad = 35}
+//};
+
+
+
+// 13. Bucles for, foreach
+//using ConsoleApp1.Clases;
+
+//Empleado[] empleados = new Empleado[3];
+//empleados[0] = new Empleado();
+//empleados[1] = new Empleado("Dani", 22);
+//Empleado emp = new Empleado("Sheraz", 25);
+//empleados[2] = emp;
+
+//for (int i = 0; i < empleados.Length; i++)
+//{
+//    Console.WriteLine(empleados[i]);
+//}
+
+//Console.WriteLine("=====");
+
+//foreach (Empleado empleado in empleados)
+//{
+//    Console.WriteLine(empleado);
+//}
+
+
+
+// 14. Herencia
+using ConsoleApp1;
+
+Caballo babieca = new Caballo("Babieca");
+Humano juan = new Humano("Juan");
+Gorila copito = new Gorila("Copito");
+
+babieca.getNombre();
+juan.getNombre();
+copito.getNombre();
