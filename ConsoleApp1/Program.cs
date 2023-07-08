@@ -1,4 +1,7 @@
-﻿// 1. Sustitución en cadenas
+﻿using ConsoleApp1;
+using ConsoleApp1.Clases;
+
+// 1. Sustitución en cadenas
 //Console.WriteLine("Introduce un número: ");
 //int a = int.Parse(Console.ReadLine());
 //Console.WriteLine("Introduce otro número: ");
@@ -139,8 +142,6 @@
 
 
 // 12. Arrays
-//using ConsoleApp1.Clases;
-
 //// Explícitos
 //int[] enteros = new int[3];
 //enteros[0] = 1;
@@ -173,8 +174,6 @@
 
 
 // 13. Bucles for, foreach
-//using ConsoleApp1.Clases;
-
 //Empleado[] empleados = new Empleado[3];
 //empleados[0] = new Empleado();
 //empleados[1] = new Empleado("Dani", 22);
@@ -201,8 +200,6 @@
 
 
 // 15. POO
-//using ConsoleApp1.Clases;
-
 //Punto p1 = new Punto(9, 5);
 //Punto p2 = new Punto();
 
@@ -213,12 +210,35 @@
 
 
 // 16. Herencia
-using ConsoleApp1;
+//Caballo babieca = new Caballo("Babieca");
+//Humano juan = new Humano("Juan");
+//Gorila copito = new Gorila("Copito");
 
-Caballo babieca = new Caballo("Babieca");
-Humano juan = new Humano("Juan");
-Gorila copito = new Gorila("Copito");
+//babieca.getNombre();
+//juan.getNombre();
+//copito.getNombre();
 
-babieca.getNombre();
-juan.getNombre();
-copito.getNombre();
+
+
+// 17. Principio de sustitución
+//Humano dani = new Humano("Dani");
+//Mamifero bucéfalo = new Caballo("Bucéfalo");
+//Mamifero chita = new Gorila("Dani");
+
+//Mamifero[] mamiferos = new Mamifero[3] { dani, bucéfalo, chita};
+//foreach(Mamifero mamifero in mamiferos)
+//{
+//    if(mamifero is Humano)
+//    {
+//        mamifero.getNombre();
+//    }
+//}
+
+
+
+// 18. Polimorfismo
+//Humano humano1 = new Humano("humano1");
+//humano1.pensar();
+
+//Mamifero humano2 = new Humano("humano2");
+//humano2.pensar();

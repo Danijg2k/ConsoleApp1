@@ -23,6 +23,11 @@ namespace ConsoleApp1
             Console.WriteLine("Soy capaz de respirar");
         }
 
+        public virtual void pensar()
+        {
+            Console.WriteLine("Pensamiento básico instintivo");
+        }
+
         public void cuidarCrias()
         {
             Console.WriteLine("Cuido de mis crías hasta que se valgan por sí solas");
@@ -52,7 +57,7 @@ namespace ConsoleApp1
         public Humano(string nombre) : base(nombre) { }
 
         // Métodos
-        public void pensar()
+        public override void pensar()
         {
             Console.WriteLine("Soy capaz de pensar ¿?");
         }
@@ -67,6 +72,11 @@ namespace ConsoleApp1
         public void trepar()
         {
             Console.WriteLine("Soy capaz de trepar");
+        }
+
+        public override void pensar()
+        {
+            Console.WriteLine("Pensamiento instintivo avanzado");
         }
     }
 }
